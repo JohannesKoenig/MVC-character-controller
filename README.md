@@ -2,6 +2,10 @@
 
 An exercise in creating a 3d-third person character controller with "dark souls"-like movement. The goal was to implement the model-view-controller pattern to help with scaling complexity and allow for swapping components of the character for different ones.
 
+## Dev
+- godot version: `4.2.2`
+- Main scene: `res://scenes/Hub_world.tscn`
+
 ## Noteworthy highlights
 - The character is modeled, rigged and animated in blender and imported in *glb* file-format. Godots import settings were used to build a convenient pipeline for extracting assets from the glb-file like the aminations into separate binary resources. This allows for continuous modification of the project-file in blender and automatic imports of changes via the glb-file-import-pipeline.
 - Animations were done without root motion and the motion was added in the state's behaviour instead - this allows for fully physically simulated movement (for example a character can fall down while dodge rolling from a cliff
