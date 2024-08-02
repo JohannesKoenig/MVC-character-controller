@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://br6uxbuq24yoj"]
+
+[ext_resource type="PackedScene" uid="uid://s4xex0gfg5r0" path="res://assets/stair_step.glb" id="1_r1dgt"]
+
+[node name="stair_step" instance=ExtResource("1_r1dgt")]
+
+[node name="stair_steps-col" parent="." index="1"]
+visible = false

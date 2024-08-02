@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://bbhjssuvc7doy"]
+
+[ext_resource type="PackedScene" uid="uid://beefpxcke38ha" path="res://scenes/character.tscn" id="1_eaog3"]
+
+[sub_resource type="Environment" id="Environment_cfrm1"]
+tonemap_mode = 2
+tonemap_exposure = 0.7
+tonemap_white = 1.04
+sdfgi_enabled = true
+volumetric_fog_enabled = true
+
+[node name="World" type="Node3D"]
+
+[node name="Character" parent="." instance=ExtResource("1_eaog3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 0.333, 2.08165e-12)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.716728, 0.697353, 0, -0.697353, 0.716728, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_cfrm1")
+
+[editable path="Character"]

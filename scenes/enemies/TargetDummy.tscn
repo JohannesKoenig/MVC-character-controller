@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://7xlkl8gox141"]
+
+[ext_resource type="Script" path="res://scripts/TargetDummy.gd" id="1_2db0t"]
+[ext_resource type="PackedScene" uid="uid://djpidgjyklmd0" path="res://scenes/model.tscn" id="9_i6f48"]
+[ext_resource type="PackedScene" uid="uid://crubub4tctesj" path="res://scenes/visuals.tscn" id="10_xeoqy"]
+
+[node name="TargetDummy" type="Node3D"]
+script = ExtResource("1_2db0t")
+
+[node name="Model" parent="." instance=ExtResource("9_i6f48")]
+
+[node name="ShieldHurtBox" parent="Model/CombatSystem/SwordAndShield" index="1"]
+collision_layer = 128
+collision_mask = 4
+
+[node name="HandRigL" parent="Model/rig/Skeleton3D" index="0"]
+transform = Transform3D(-0.215892, 0.0373231, 0.975714, -0.165444, -0.986229, 0.00111821, 0.96231, -0.161183, 0.219091, -0.00349399, 0.53107, -0.461953)
+
+[node name="HandRigR" parent="Model/rig/Skeleton3D" index="1"]
+transform = Transform3D(0.194666, 0.152173, 0.968998, 0.297945, -0.950398, 0.0893943, 0.934525, 0.271307, -0.230347, 6.88938e-05, 0.557446, 0.450603)
+
+[node name="HurtBox" parent="Model" index="6"]
+collision_layer = 128
+collision_mask = 4
+
+[node name="Visuals" parent="." instance=ExtResource("10_xeoqy")]
+
+[node name="Camera3D" parent="Visuals/CameraMount" index="0"]
+current = false
+
+[editable path="Model"]
+[editable path="Visuals"]
+[editable path="Visuals/CameraMount"]

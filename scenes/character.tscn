@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=3 uid="uid://beefpxcke38ha"]
+
+[ext_resource type="Script" path="res://scripts/character.gd" id="1_12cic"]
+[ext_resource type="Script" path="res://scripts/InputGatherer.gd" id="2_kat6i"]
+[ext_resource type="PackedScene" uid="uid://djpidgjyklmd0" path="res://scenes/model.tscn" id="3_10hxn"]
+[ext_resource type="PackedScene" uid="uid://crubub4tctesj" path="res://scenes/visuals.tscn" id="4_7fvuk"]
+
+[node name="Character" type="Node3D" groups=["player"]]
+script = ExtResource("1_12cic")
+
+[node name="Input" type="Node" parent="."]
+script = ExtResource("2_kat6i")
+
+[node name="Model" parent="." instance=ExtResource("3_10hxn")]
+
+[node name="Visuals" parent="." instance=ExtResource("4_7fvuk")]
